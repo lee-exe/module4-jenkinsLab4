@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker run -d -p 80:5000 --name node-app node-img:latest'
+                sh 'docker run -d -p 5000:5000 --name node-app node-img:latest'
             }
         }
     }
